@@ -1,7 +1,10 @@
 const express = require("express");
+const cors = require("cors");
 const { createClient } = require("webdav");
 
 const app = express();
+
+app.use(cors());
 app.use(express.json());
 
 app.post("/upload", async (req, res) => {
